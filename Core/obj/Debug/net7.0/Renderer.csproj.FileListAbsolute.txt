@@ -1,0 +1,12 @@
+D:\Dev\Math\Renderer\bin\Debug\net7.0\Renderer.deps.json
+D:\Dev\Math\Renderer\bin\Debug\net7.0\Renderer.dll
+D:\Dev\Math\Renderer\bin\Debug\net7.0\Renderer.pdb
+D:\Dev\Math\Renderer\obj\Debug\net7.0\Renderer.csproj.AssemblyReference.cache
+D:\Dev\Math\Renderer\obj\Debug\net7.0\Renderer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\Math\Renderer\obj\Debug\net7.0\Renderer.AssemblyInfoInputs.cache
+D:\Dev\Math\Renderer\obj\Debug\net7.0\Renderer.AssemblyInfo.cs
+D:\Dev\Math\Renderer\obj\Debug\net7.0\Renderer.csproj.CoreCompileInputs.cache
+D:\Dev\Math\Renderer\obj\Debug\net7.0\Renderer.dll
+D:\Dev\Math\Renderer\obj\Debug\net7.0\refint\Renderer.dll
+D:\Dev\Math\Renderer\obj\Debug\net7.0\Renderer.pdb
+D:\Dev\Math\Renderer\obj\Debug\net7.0\ref\Renderer.dll
