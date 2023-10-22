@@ -1,5 +1,6 @@
 ﻿using ImGuiNET;
 using Renderer.Interfaces;
+using Renderer.Interpreters;
 using Renderer.Renderers.OpenGl;
 
 namespace Renderer.UI;
@@ -7,13 +8,23 @@ namespace Renderer.UI;
 public class ConsoleViewport : IViewport
 {
     private bool close;
-    private ImGuiManager manager; 
+    private readonly ImGuiManager manager;
+    private readonly IInterpreter interpreter;
 
     public bool ToRender() => !close;
+    public IInterpreter LoadViewport()
+    {
+        string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, $"UI/{nameof(ConsoleViewport)}.xml");
+        IInterpreter interpreter = InterpreterFactory.Create(filePath);
+        
+        interpreter.Parse();
+        return interpreter;
+    }
 
     public ConsoleViewport(ImGuiManager manager)
     {
         this.manager = manager;
+        this.interpreter = LoadViewport();
     }
 
     public void Show() => close = false;
@@ -25,28 +36,9 @@ public class ConsoleViewport : IViewport
         Dispose();
     }
 
-    public void Render(float delta)
+    public async void Render(float delta)
     {
-        ImGui.Begin("Console", ref close, ImGuiWindowFlags.MenuBar);
-        if (ImGui.BeginMenuBar())
-        {
-            if (ImGui.BeginMenu("File"))
-            {
-                if (ImGui.MenuItem("Clear", "Ctrl+R"))
-                {
-                    Console.WriteLine("Reset console");
-                }
-                if (ImGui.MenuItem("Close", "Ctrl+Q"))
-                {
-                    Close();
-                }
-                ImGui.EndMenu();
-            }
-            ImGui.EndMenuBar();
-        }
-
-        ImGui.Text("Hello World!");
-        ImGui.End();
+        interpreter.Render();
     }
 
     public void Dispose()

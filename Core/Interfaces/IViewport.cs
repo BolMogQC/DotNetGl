@@ -5,6 +5,7 @@ namespace Renderer.Interfaces;
 public interface IViewport
 {
     public bool ToRender();
+    public IInterpreter LoadViewport();
     public void Show();
     public void Hide();
     public void Close();

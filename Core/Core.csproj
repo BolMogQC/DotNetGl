@@ -15,7 +15,9 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Exceptions\" />
+      <None Update="UI\ConsoleViewport.xml">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 
 </Project>

@@ -46,3 +46,4 @@ D:\Dev\Math\Application\obj\Debug\net7.0\Application.genruntimeconfig.cache
 D:\Dev\Math\Application\obj\Debug\net7.0\ref\Application.dll
 D:\Dev\Math\Application\bin\Debug\net7.0\Core.dll
 D:\Dev\Math\Application\bin\Debug\net7.0\Core.pdb
+D:\Dev\Math\Application\bin\Debug\net7.0\UI\ConsoleViewport.xml
